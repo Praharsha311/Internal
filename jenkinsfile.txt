@@ -1,26 +1,16 @@
-pipeline{
-	agent any
-	stages{
-		stage("Build and Test")
-		{
-			steps
-			{
-				echo "Build and Text Successful!!"
-			}
-		}
-		stage("Generate Artifact")
-		{
-			steps
-			{
-				echo "hello"
-			}
-		}
-	}
-	post
-	{
-		success
-		{
-			echo "Pipeline successful!"
-		}
-	}
+pipeline {
+    agent any
+    stages {
+        stage("Build and Test") {
+            steps {
+                echo "Build and Test Successful!!"
+            }
+        }
+        stage("Generate Artifact") {
+            steps {
+                echo "hello"
+                echo "Pipeline successful!"
+            }
+        }
+    }
 }
