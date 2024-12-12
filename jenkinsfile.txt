@@ -1,15 +1,22 @@
 pipeline {
     agent any
+
     stages {
-        stage("Build and Test") {
+        stage('Build') {
             steps {
-                echo "Build and Test Successful!!"
+                echo 'Building the project...'
             }
         }
-        stage("Generate Artifact") {
+
+        stage('Test') {
             steps {
-                echo "hello"
-                echo "Pipeline successful!"
+                echo 'Running tests...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the project...'
             }
         }
     }
